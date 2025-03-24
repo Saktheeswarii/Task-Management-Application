@@ -1,0 +1,184 @@
+/* General Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #e0f7fa, #cce0ff);
+  margin: 0;
+  padding: 0;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Task Manager Container */
+.container-wrapper {
+  max-width: 800px;
+  width: 90%;
+  margin: 20px;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 16px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.5);
+  border-top: 2px solid blueviolet;
+  border-bottom:2px solid blueviolet ;
+}
+
+header h1 {
+  text-align: center;
+  color:black;
+  font-size: 34px;
+  margin-bottom: 25px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+/* Task Form */
+.form-section #task-input-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-section input,
+.form-section textarea {
+  padding: 14px;
+  border: 1.5px solid #bdc3c7;
+  border-radius: 8px;
+  font-size: 16px;
+  background: #f0f0f0;
+  outline: none;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.form-section input:focus,
+.form-section textarea:focus {
+  border-color: black;
+  background: #fff;
+}
+
+.form-section textarea {
+  resize: vertical;
+  height: 80px;
+}
+
+/* Add Task Button */
+.form-section button {
+  padding: 14px 20px;
+  background: blueviolet;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: transform 0.2s ease-in-out;
+}
+
+.form-section button:hover {
+  background: #6a11cb;
+}
+
+/* Task Filters - Dropdown */
+.filter-controls {
+  display: flex;
+  justify-content: center;
+  margin: 25px 0;
+}
+
+#filter-dropdown {
+  padding: 12px 20px;
+  border: 2px solid black;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #34495e;
+  background: #ecf0f1;
+  cursor: pointer;
+  appearance: none; 
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url('data:image/svg+xml;utf8,<svg fill="black" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>'); /* Add custom arrow */
+  background-repeat: no-repeat;
+  background-position-x: 95%;
+  background-position-y: center;
+  padding-right: 30px; 
+}
+
+#filter-dropdown:focus {
+  border-color: #3498db;
+  outline: none;
+}
+
+/* Task List */
+.list-container ul {
+  list-style: none;
+  padding: 0;
+}
+
+.list-container li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px;
+  border: 1px solid #ecf0f1;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  background: white;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+.list-container li:hover {
+  transform: translateY(-3px);
+}
+
+/* Completed Tasks */
+.list-container li.completed {
+  background: #e8f5e9;
+  border-color: #a5d6a7;
+  text-decoration: line-through;
+  color: #757575;
+}
+
+/* Task Buttons */
+.list-container li button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: transform 0.2s ease-in-out;
+}
+
+.list-container li button.edit-btn {
+  background: #f39c12;
+  color: white;
+}
+
+.list-container li button.edit-btn:hover {
+  background: #e67e22;
+  transform: translateY(-1px);
+}
+
+.list-container li button.delete-btn {
+  background: #e74c3c;
+  color: white;
+}
+
+.list-container li button.delete-btn:hover {
+  background: #c0392b;
+  transform: translateY(-1px);
+}
+
+.list-container li button.toggle-status {
+  background: #3498db;
+  color: white;
+}
+
+.list-container li button.toggle-status:hover {
+  background: #2980b9;
+  transform: translateY(-1px);
+}
